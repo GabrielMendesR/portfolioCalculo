@@ -13,7 +13,7 @@
 
   <title>Algoritimo de Busca Binario | Portfólio Cálculo</title>
 
-  <link rel="icon" type="image/png" href="/portfolioCalculo/avatar.webp">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GabrielMendesR/portfolioCalculo/main/avatar.webp">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
   <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="/portfolioCalculo/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
@@ -318,7 +318,7 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">fun binarySearch(arr: IntArray, key: Int): Int &#123;</span><br><span class="line">    var left = 0</span><br><span class="line">    var right = arr.size - 1</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        val mid = left + (right - left) / 2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == key) &#123;</span><br><span class="line">            <span class="built_in">return</span> mid</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; key) &#123;</span><br><span class="line">            left = mid + 1</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid - 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> -1 // Retorna -1 se o elemento não <span class="keyword">for</span> encontrado</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fun <span class="function"><span class="title">main</span></span>() &#123;</span><br><span class="line">    val arr = intArrayOf(11, 22, 25, 34, 64, 90)</span><br><span class="line">    val key = 34</span><br><span class="line"></span><br><span class="line">    val index = binarySearch(arr, key)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (index != -1) &#123;</span><br><span class="line">        println(<span class="string">&quot;Elemento <span class="variable">$key</span> encontrado na posição <span class="variable">$index</span>.&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        println(<span class="string">&quot;Elemento <span class="variable">$key</span> não encontrado no array.&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">binarySearch</span><span class="params">(arr: <span class="type">IntArray</span>, key: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> left = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> right = arr.size - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">val</span> mid = left + (right - left) / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == key) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; key) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span> <span class="comment">// Retorna -1 se o elemento não for encontrado</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> arr = intArrayOf(<span class="number">11</span>, <span class="number">22</span>, <span class="number">25</span>, <span class="number">34</span>, <span class="number">64</span>, <span class="number">90</span>)</span><br><span class="line">    <span class="keyword">val</span> key = <span class="number">34</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> index = binarySearch(arr, key)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (index != -<span class="number">1</span>) &#123;</span><br><span class="line">        println(<span class="string">&quot;Elemento <span class="variable">$key</span> encontrado na posição <span class="variable">$index</span>.&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        println(<span class="string">&quot;Elemento <span class="variable">$key</span> não encontrado no array.&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       </div>
@@ -367,7 +367,7 @@
     
       <!-- https://github.com/overtrue/share.js -->
 <!-- 文章详情页的分享 -->
-<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+<div class="social-share" data-sites="twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
 
 <script defer src="/portfolioCalculo/js/shareJs/social-share.min.js"></script>
 </script>
@@ -406,7 +406,7 @@
     
       
         <a class='avatar flat-box rectangle' href='https://github.com/GabrielMendesR/portfolioCalculo'>
-          <img src='avatar.webp'/>
+          <img src='https://raw.githubusercontent.com/GabrielMendesR/portfolioCalculo/main/avatar.webp'/>
         </a>
       
     
@@ -1019,20 +1019,6 @@
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
-
-<script async>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
     
     <!-- 背景彩带 -->
